@@ -23,8 +23,10 @@ namespace WpfEventsApp
 
         private void Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            //txtTablo.Text += "sender: " + sender.ToString() + "\n";
-            //txtTablo.Text += "source: " + e.Source.ToString() + "\n\n";
+            txtTablo.Text += "sender: " + sender.ToString() + "\n";
+            txtTablo.Text += "source: " + e.Source.ToString() + "\n\n";
+            if (sender == e.Source)
+                e.Handled = true;
         }
 
         private void StackPanel_Checked(object sender, RoutedEventArgs e)
@@ -35,10 +37,10 @@ namespace WpfEventsApp
 
         private void txtEditor_MouseWheel(object sender, MouseWheelEventArgs e)
         {
-            if (e.Delta > 0)
-                txtEditor.FontSize += 2;
-            else if(e.Delta < 0)
-                txtEditor.FontSize -= 2;
+            //if (e.Delta > 0)
+            //    txtEditor.FontSize += 2;
+            //else if(e.Delta < 0)
+            //    txtEditor.FontSize -= 2;
         }
     }
 }

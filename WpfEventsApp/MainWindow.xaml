@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:WpfEventsApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid PreviewMouseDown="Button_MouseDown">
+    <Grid MouseDown="Button_MouseDown">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Width="300" 
-                    PreviewMouseDown="Button_MouseDown">
+                    MouseDown="Button_MouseDown">
             <Button Content="Click me" 
                     FontSize="30"
-                    PreviewMouseDown="Button_MouseDown"/>
+                    MouseDown="Button_MouseDown"/>
             <StackPanel RadioButton.Checked="StackPanel_Checked">
                 <RadioButton Content="Item 1" GroupName="items" FontSize="30"/>
                 <RadioButton Content="Item 2" GroupName="items" FontSize="30"/>
@@ -25,13 +25,13 @@
             
             <!--MouseDown="Button_MouseDown"/>-->
         </StackPanel>
-        <!--<TextBlock Grid.Column="1" x:Name="txtTablo" FontSize="30"/>-->
-        <TextBox x:Name="txtEditor"
+        <TextBlock Grid.Column="1" x:Name="txtTablo" FontSize="30"/>
+        <!--<TextBox x:Name="txtEditor"
                  Grid.Column="1"
                  FontSize="12" 
                  MouseWheel="txtEditor_MouseWheel"
                  TextWrapping="Wrap"
-                 AcceptsReturn="True"/>
+                 AcceptsReturn="True"/>-->
     </Grid>
     
 </Window>
